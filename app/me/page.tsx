@@ -24,7 +24,7 @@ export default function Me() {
 
       <h2 className={h2}>About</h2>
       <p className={p}>
-        I also think about <a href="/" style={{ opacity: 0.25 }} className={p}>serious things</a>.
+        PhD student by day. Boring by self-assessment. Interesting by accident. If you're cute and interesting, say hi on <a href="https://www.instagram.com/qinyu_xu/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 dark:text-gray-400 hover:dark:text-gray-300">Instagram</a>. I also think about <a href="/" style={{ opacity: 0.25 }} className={p}>serious things</a>.
       </p>
 
       <h2 className={h2}>Life</h2>

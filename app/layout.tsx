@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { STIX_Two_Text } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
+import { Footer } from '@/components/footer';
 
 const stixTwoText = STIX_Two_Text({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -37,29 +38,3 @@ export default function RootLayout({
   );
 }
 
-function Footer() {
-  const links = [
-    { name: 'Email', url: 'mailto:qinyu.xu@nyu.edu' },
-    { name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=tGcgxQQAAAAJ&hl=en' },
-    { name: 'GitHub', url: 'https://github.com/Qinyu-Xu' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/qinyu-xu-10b324380/' }
-  ];
-
-  return (
-    <footer className="mt-12 text-center">
-      <div className="flex justify-center space-x-4 tracking-tight">
-        {links.map((link) => (
-          <a
-            key={link.name}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-colors duration-200"
-          >
-            {link.name}
-          </a>
-        ))}
-      </div>
-    </footer>
-  );
-}
