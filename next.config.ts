@@ -8,12 +8,23 @@ export const sql = postgres(process.env.POSTGRES_URL!, {
 
 const nextConfig: NextConfig = {
   pageExtensions: ['mdx', 'ts', 'tsx'],
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/:path*',
+          has: [{ type: 'host', value: 'qinyuxu.me' }],
+          destination: '/me',
+        },
+      ],
+    };
+  },
   async redirects() {
     const hostRedirects = [
       {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'qinyuxu.me' }],
-        destination: '/me',
+        source: '/me',
+        has: [{ type: 'host', value: 'qinyuxu.io' }],
+        destination: 'https://qinyuxu.me',
         permanent: false,
       },
     ];
