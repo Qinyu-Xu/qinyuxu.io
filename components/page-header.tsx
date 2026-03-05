@@ -60,13 +60,13 @@ export function PageHeader({
           ))}
         </div>
       </div>
-      <div className="relative flex-shrink-0 w-40 overflow-hidden rounded-sm shadow-sm">
+      <div className="flex-shrink-0 overflow-hidden rounded-sm shadow-sm">
         <Image
           src={photo}
           alt={name}
-          fill
+          width={160}
+          height={192}
           className="object-cover"
-          sizes="160px"
           priority
         />
       </div>
