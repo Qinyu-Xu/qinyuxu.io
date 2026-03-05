@@ -16,7 +16,9 @@ const meLinks = [
 
 export function Footer() {
   const pathname = usePathname();
-  const links = pathname === '/me' ? meLinks : mainLinks;
+  const isMe = pathname === '/me' ||
+    (typeof window !== 'undefined' && window.location.hostname === 'qinyuxu.me');
+  const links = isMe ? meLinks : mainLinks;
 
   return (
     <footer className="mt-12 text-center">
