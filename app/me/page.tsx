@@ -42,6 +42,7 @@ export default function Me() {
         <li className="pl-1">learning to run faster with people who are already fast</li>
         <li className="pl-1">can't figure out how to afford Roosevelt Island Racquet Club</li>
         <li className="pl-1">weekly pilgrimage to Flushing for 螺蛳粉 and 鸭血粉丝</li>
+        <li className="pl-1">写这个网站真是太好玩了</li>
       </ul>
       <br />
       This website strictly follows the rules of software engineering. If you don't believe me, go check my commit messages.
