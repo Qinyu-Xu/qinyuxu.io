@@ -40,9 +40,9 @@ export default function RootLayout({
 function Footer() {
   const links = [
     { name: 'email', url: 'mailto:qinyu.xu@nyu.edu' },
-    { name: 'google scholar', url: '#' },
-    { name: 'github', url: 'https://github.com/yourusername' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/yourusername' }
+    { name: 'google scholar', url: 'https://scholar.google.com/citations?user=tGcgxQQAAAAJ&hl=en' },
+    { name: 'github', url: 'https://github.com/Qinyu-Xu' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/qinyu-xu-10b324380/' }
   ];
 
   return (
