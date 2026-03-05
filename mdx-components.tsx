@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { highlight } from 'sugar-high';
+import { PageHeader } from '@/components/page-header';
 
 type HeadingProps = ComponentPropsWithoutRef<'h1'>;
 type ParagraphProps = ComponentPropsWithoutRef<'p'>;
@@ -108,73 +108,7 @@ const components = {
       {...props}
     />
   ),
-  PageHeader: ({
-    name,
-    title,
-    institution,
-    university,
-    email,
-    photo,
-    googleScholar,
-    github,
-    linkedin,
-  }: {
-    name: string;
-    title: string;
-    institution: string;
-    university: string;
-    email: string;
-    photo: string;
-    googleScholar?: string;
-    github?: string;
-    linkedin?: string;
-  }) => {
-    const links = [
-      { name: 'email', url: `mailto:${email}` },
-      ...(googleScholar ? [{ name: 'google scholar', url: googleScholar }] : []),
-      ...(github ? [{ name: 'github', url: github }] : []),
-      ...(linkedin ? [{ name: 'linkedin', url: linkedin }] : []),
-    ];
-    return (
-      <div className="flex justify-between gap-8 pt-12">
-        <div className="flex flex-col justify-between">
-          <div>
-            <h1 className="text-4xl font-medium mb-3">{name}</h1>
-            <p className="text-gray-700 dark:text-zinc-300 leading-relaxed">
-              {title}
-              <br />
-              {institution}
-              <br />
-              {university}
-            </p>
-          </div>
-          <div className="flex gap-4 mt-4">
-            {links.map((link) => (
-              <a
-                key={link.name}
-                href={link.url}
-                target={link.url.startsWith('mailto:') ? undefined : '_blank'}
-                rel="noopener noreferrer"
-                className="text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-colors duration-200"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="relative flex-shrink-0 w-40 overflow-hidden rounded-sm shadow-sm">
-          <Image
-            src={photo}
-            alt={name}
-            fill
-            className="object-cover"
-            sizes="160px"
-            priority
-          />
-        </div>
-      </div>
-    );
-  },
+  PageHeader,
 };
 
 declare global {

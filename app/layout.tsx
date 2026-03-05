@@ -39,10 +39,10 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
-    { name: 'email', url: 'mailto:qinyu.xu@nyu.edu' },
-    { name: 'google scholar', url: 'https://scholar.google.com/citations?user=tGcgxQQAAAAJ&hl=en' },
-    { name: 'github', url: 'https://github.com/Qinyu-Xu' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/qinyu-xu-10b324380/' }
+    { name: 'Email', url: 'mailto:qinyu.xu@nyu.edu' },
+    { name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=tGcgxQQAAAAJ&hl=en' },
+    { name: 'GitHub', url: 'https://github.com/Qinyu-Xu' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/qinyu-xu-10b324380/' }
   ];
 
   return (
