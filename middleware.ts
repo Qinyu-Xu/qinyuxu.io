@@ -6,11 +6,14 @@ export function middleware(request: NextRequest) {
 
   console.log('host header:', hostname);
   console.log('hostname:', hostnameWithoutPort);
+  console.log('pathname:', request.nextUrl.pathname);
 
   if (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me') {
     const url = request.nextUrl.clone();
     url.pathname = '/me';
-    return NextResponse.rewrite(url);
+    const response = NextResponse.rewrite(url);
+    response.headers.set('x-domain', 'me');
+    return response;
   }
 
   if (
