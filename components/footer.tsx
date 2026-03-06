@@ -1,7 +1,3 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
-
 const mainLinks = [
   { name: 'Email', url: 'mailto:qinyu.xu@nyu.edu' },
   { name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=tGcgxQQAAAAJ&hl=en' },
@@ -14,10 +10,7 @@ const meLinks = [
   { name: 'Instagram', url: 'https://www.instagram.com/qinyu_xu/' },
 ];
 
-export function Footer() {
-  const pathname = usePathname();
-  const isMe = pathname === '/me' ||
-    (typeof window !== 'undefined' && window.location.hostname === 'qinyuxu.me');
+export function Footer({ isMe }: { isMe: boolean }) {
   const links = isMe ? meLinks : mainLinks;
 
   return (

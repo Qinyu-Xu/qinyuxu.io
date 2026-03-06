@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { STIX_Two_Text } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
+import { headers } from 'next/headers';
 import { Footer } from '@/components/footer';
 
 const stixTwoText = STIX_Two_Text({ subsets: ['latin'], weight: ['400', '700'] });
@@ -19,11 +20,15 @@ export const metadata: Metadata = {
   icons: { icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>' }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const host = headersList.get('host') ?? '';
+  const isMe = host === 'qinyuxu.me' || host === 'www.qinyuxu.me';
+
   return (
     <html lang="en" className={`${stixTwoText.className}`}>
       <body className="antialiased tracking-tight">
@@ -31,7 +36,7 @@ export default function RootLayout({
           <main className="max-w-[80ch] mx-auto w-full space-y-6">
             {children}
           </main>
-          <Footer />
+          <Footer isMe={isMe} />
           <Analytics />
         </div>
       </body>
