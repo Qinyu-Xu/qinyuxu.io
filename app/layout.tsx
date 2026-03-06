@@ -9,7 +9,7 @@ import Script from 'next/script';
 const stixTwoText = STIX_Two_Text({ subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yoursite.github.io'),
+  metadataBase: new URL('https://qinyuxu.io'),
   alternates: {
     canonical: '/'
   },
@@ -30,6 +30,7 @@ export default async function RootLayout({
   const host = headersList.get('host') ?? '';
   const isMe = host === 'qinyuxu.me' || host === 'www.qinyuxu.me';
   const gaId = isMe ? 'G-8DXBDPJKKS' : 'G-S5F0SYG8VT';
+  console.log('host:', host, 'isMe:', isMe, 'gaId:', gaId);
 
   return (
     <html lang="en" className={`${stixTwoText.className}`}>
