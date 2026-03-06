@@ -4,12 +4,17 @@ export function middleware(request: NextRequest) {
   const country = (request as any).geo?.country;
   const hostname = request.headers.get('host') ?? '';
   const hostnameWithoutPort = hostname.split(':')[0];
+  const pathname = request.nextUrl.pathname;
+
+  if (pathname === '/me' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
+    return NextResponse.next();
+  }
 
   if (country === 'CN' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
     return new NextResponse('404', { status: 404 });
   }
 
-  if (request.nextUrl.pathname === '/robots.txt' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
+  if (pathname === '/robots.txt' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
     return new NextResponse('User-agent: *\nDisallow: /', {
       headers: { 'Content-Type': 'text/plain' },
     });
@@ -17,7 +22,7 @@ export function middleware(request: NextRequest) {
 
   console.log('host header:', hostname);
   console.log('hostname:', hostnameWithoutPort);
-  console.log('pathname:', request.nextUrl.pathname);
+  console.log('pathname:', pathname);
 
   if (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me') {
     const url = request.nextUrl.clone();
@@ -29,7 +34,7 @@ export function middleware(request: NextRequest) {
 
   if (
     (hostnameWithoutPort === 'qinyuxu.io' || hostnameWithoutPort === 'www.qinyuxu.io') &&
-    request.nextUrl.pathname === '/me'
+    pathname === '/me'
   ) {
     return NextResponse.redirect('https://qinyuxu.me', 302);
   }
