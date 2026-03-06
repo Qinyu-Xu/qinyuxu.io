@@ -9,6 +9,12 @@ export function middleware(request: NextRequest) {
     return new NextResponse('404', { status: 404 });
   }
 
+  if (request.nextUrl.pathname === '/robots.txt' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
+    return new NextResponse('User-agent: *\nDisallow: /', {
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
+
   console.log('host header:', hostname);
   console.log('hostname:', hostnameWithoutPort);
   console.log('pathname:', request.nextUrl.pathname);
