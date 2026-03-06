@@ -33,7 +33,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className={`${stixTwoText.className}`}>
-      <head>
+      <body className="antialiased tracking-tight">
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
@@ -41,8 +41,6 @@ export default async function RootLayout({
           gtag('js', new Date());
           gtag('config', '${gaId}');
         `}} />
-      </head>
-      <body className="antialiased tracking-tight">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
           <main className="max-w-[80ch] mx-auto w-full space-y-6">
             {children}
