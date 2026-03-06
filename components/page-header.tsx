@@ -34,8 +34,8 @@ export function PageHeader({
   ];
 
   return (
-    <div className="flex justify-between gap-8 pt-12">
-      <div className="flex flex-col justify-between">
+    <div className="flex gap-8 pt-12">
+      <div className="flex flex-col justify-between flex-1">
         <div>
           <h1 className="text-4xl font-medium mb-3">{name}</h1>
           <p className="text-gray-700 dark:text-zinc-300 leading-relaxed">
