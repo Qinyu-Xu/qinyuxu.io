@@ -21,6 +21,10 @@ export function middleware(request: NextRequest) {
     });
   }
 
+  console.log('host header:', hostname);
+  console.log('hostname:', hostnameWithoutPort);
+  console.log('pathname:', pathname);
+
   if (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me') {
     const url = request.nextUrl.clone();
     url.pathname = '/me';
