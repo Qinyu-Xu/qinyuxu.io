@@ -11,6 +11,7 @@ const maShanZheng = Ma_Shan_Zheng({
 export const metadata: Metadata = {
   title: 'Me',
   alternates: { canonical: '/me' },
+  robots: { index: false, follow: false },
 };
 
 const h2 = 'text-[11px] uppercase tracking-[0.14em] font-medium text-gray-400 dark:text-zinc-500 border-b border-gray-200 dark:border-zinc-700 pb-1.5 mt-10 mb-4';
