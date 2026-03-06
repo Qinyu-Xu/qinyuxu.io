@@ -29,7 +29,7 @@ export default async function RootLayout({
   const headersList = await headers();
   const host = headersList.get('host') ?? '';
   const isMe = host === 'qinyuxu.me' || host === 'www.qinyuxu.me';
-  const gaId = isMe ? 'G-8DXBDPJKKS' : 'G-44J47PT4HN';
+  const gaId = isMe ? 'G-8DXBDPJKKS' : 'G-S5F0SYG8VT';
 
   return (
     <html lang="en" className={`${stixTwoText.className}`}>
