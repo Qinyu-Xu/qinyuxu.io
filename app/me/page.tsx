@@ -28,7 +28,7 @@ export default function Me() {
       </p>
 
       <h2 className={h2}>Life</h2>
-      <p className={p}>Grew up in a small town near Shanghai. Native speaker of <span style={{fontFamily: '"KaiTi", "楷体", "STKaiti", serif', fontSize: '1em'}}>苏北</span>nese, which you've never heard of. Moved to New York in 2025 for grad school, which means I traded one kind of not-knowing-what-I'm-doing for another, but in English this time. </p>
+      <p className={p}>Grew up in a small town near Shanghai. Native speaker of <span style={{fontFamily: '"STKaiti", "Kaiti SC", "KaiTi", "楷体", serif', fontSize: '1em'}}>苏北</span>nese, which you've never heard of. Moved to New York in 2025 for grad school, which means I traded one kind of not-knowing-what-I'm-doing for another, but in English this time. </p>
       <p className={p + ' mt-3'}>Also recently started learning how to be gay, which is its own kind of grad school.</p>
       <p className={p + ' mt-3'}>Most of my life happens at a desk on the 4th floor of 60 5th Ave. The rest happens on any random corners around the city.</p>
       <p className={p + ' mt-3'}>I'm still figuring out most things.</p>
@@ -41,8 +41,8 @@ export default function Me() {
         <li className="pl-1">trying to make latte and matcha art (currently: milk foam)</li>
         <li className="pl-1">learning to run faster with people who are already fast</li>
         <li className="pl-1">can't figure out how to afford Roosevelt Island Racquet Club</li>
-        <li className="pl-1">weekly pilgrimage to Flushing for <span style={{fontFamily: '"KaiTi", "楷体", "STKaiti", serif', fontSize: '1em'}}>螺蛳粉</span> and <span style={{fontFamily: '"KaiTi", "楷体", "STKaiti", serif', fontSize: '1em'}}>鸭血粉丝</span></li>
-        <li className="pl-1"><span style={{fontFamily: '"KaiTi", "楷体", "STKaiti", serif', fontSize: '1em'}}>写这个网站真是太好玩儿了</span></li>
+        <li className="pl-1">weekly pilgrimage to Flushing for <span style={{fontFamily: '"STKaiti", "Kaiti SC", "KaiTi", "楷体", serif', fontSize: '1em'}}>螺蛳粉</span> and <span style={{fontFamily: '"STKaiti", "Kaiti SC", "KaiTi", "楷体", serif', fontSize: '1em'}}>鸭血粉丝</span></li>
+        <li className="pl-1"><span style={{fontFamily: '"STKaiti", "Kaiti SC", "KaiTi", "楷体", serif', fontSize: '1em'}}>写这个网站真是太好玩儿了</span></li>
       </ul>
       <br />
       This website strictly follows the rules of software engineering. If you don't believe me, go check my commit messages.
