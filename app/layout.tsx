@@ -4,7 +4,7 @@ import { STIX_Two_Text } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { headers } from 'next/headers';
 import { Footer } from '@/components/footer';
-import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const stixTwoText = STIX_Two_Text({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -35,13 +35,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${stixTwoText.className}`}>
       <body className="antialiased tracking-tight">
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
-        <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${gaId}');
-        `}} />
+        <GoogleAnalytics gaId={gaId} />
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
           <main className="max-w-[80ch] mx-auto w-full space-y-6">
             {children}
