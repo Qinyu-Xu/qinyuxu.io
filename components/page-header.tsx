@@ -46,14 +46,14 @@ export function PageHeader({
             {university}
           </p>
         </div>
-        <div className="flex gap-4 mt-4">
+        <div className="flex flex-wrap gap-4 mt-4">
           {links.map((link) => (
             <a
               key={link.name}
               href={link.url}
               target={link.url.startsWith('mailto:') ? undefined : '_blank'}
               rel="noopener noreferrer"
-              className="text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-colors duration-200"
+              className="text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-colors duration-200 whitespace-nowrap"
             >
               {link.name}
             </a>
