@@ -3,8 +3,8 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
-          source: '/:path*',
-          destination: '/me/:path*',
+          source: '/',
+          destination: '/me',
           has: [{ type: 'host', value: '(?:www\\.)?qinyuxu\\.me' }],
         },
       ],

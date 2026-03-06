@@ -68,6 +68,7 @@ export function PageHeader({
           height={192}
           className="object-cover"
           priority
+          unoptimized
         />
       </div>
     </div>
