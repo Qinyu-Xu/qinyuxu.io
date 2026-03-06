@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const country = (request as any).geo?.country;
   const hostname = request.headers.get('host') ?? '';
   const hostnameWithoutPort = hostname.split(':')[0];

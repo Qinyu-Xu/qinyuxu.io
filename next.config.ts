@@ -1,4 +1,6 @@
-const nextConfig = {
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
@@ -8,8 +10,8 @@ const nextConfig = {
           has: [{ type: 'host', value: '(?:www\\.)?qinyuxu\\.me' }],
         },
       ],
-    }
+    };
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

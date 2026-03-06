@@ -30,8 +30,6 @@ export default async function RootLayout({
   const host = headersList.get('host') ?? '';
   const isMe = host === 'qinyuxu.me' || host === 'www.qinyuxu.me';
   const gaId = isMe ? 'G-8DXBDPJKKS' : 'G-44J47PT4HN';
-  console.log('host:', host, 'isMe:', isMe, 'gaId:', gaId);
-
   return (
     <html lang="en" className={`${stixTwoText.className}`}>
       <body className="antialiased tracking-tight">
