@@ -29,7 +29,7 @@ export default async function RootLayout({
   const headersList = await headers();
   const host = headersList.get('host') ?? '';
   const isMe = host === 'qinyuxu.me' || host === 'www.qinyuxu.me';
-  const gaId = isMe ? 'G-8DXBDPJKKS' : 'G-S5F0SYG8VT';
+  const gaId = isMe ? 'G-8DXBDPJKKS' : 'G-W6HPCCXQW6';
   console.log('host:', host, 'isMe:', isMe, 'gaId:', gaId);
 
   return (
