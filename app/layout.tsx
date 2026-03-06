@@ -4,6 +4,7 @@ import { STIX_Two_Text } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { headers } from 'next/headers';
 import { Footer } from '@/components/footer';
+import Script from 'next/script';
 
 const stixTwoText = STIX_Two_Text({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -28,9 +29,19 @@ export default async function RootLayout({
   const headersList = await headers();
   const host = headersList.get('host') ?? '';
   const isMe = host === 'qinyuxu.me' || host === 'www.qinyuxu.me';
+  const gaId = isMe ? 'G-8DXBDPJKKS' : 'G-44J47PT4HN';
 
   return (
     <html lang="en" className={`${stixTwoText.className}`}>
+      <head>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${gaId}');
+        `}} />
+      </head>
       <body className="antialiased tracking-tight">
         <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
           <main className="max-w-[80ch] mx-auto w-full space-y-6">
