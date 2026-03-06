@@ -5,8 +5,9 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') ?? '';
   const hostnameWithoutPort = hostname.split(':')[0];
   const pathname = request.nextUrl.pathname;
+  const isAlreadyRewritten = request.headers.get('x-rewritten') === 'true';
 
-  if (pathname === '/me' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
+  if (isAlreadyRewritten) {
     return NextResponse.next();
   }
 
@@ -20,15 +21,12 @@ export function middleware(request: NextRequest) {
     });
   }
 
-  console.log('host header:', hostname);
-  console.log('hostname:', hostnameWithoutPort);
-  console.log('pathname:', pathname);
-
   if (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me') {
     const url = request.nextUrl.clone();
     url.pathname = '/me';
     const response = NextResponse.rewrite(url);
     response.headers.set('x-domain', 'me');
+    response.headers.set('x-rewritten', 'true');
     return response;
   }
 
