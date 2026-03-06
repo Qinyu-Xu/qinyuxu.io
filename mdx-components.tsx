@@ -50,8 +50,7 @@ const components = {
     <strong className="font-bold" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
-    const className =
-      'text-blue-500 hover:text-blue-700 dark:text-gray-400 hover:dark:text-gray-300 dark:underline dark:underline-offset-2 dark:decoration-gray-800';
+    const className = 'underline';
     if (href?.startsWith('/')) {
       return (
         <Link href={href} className={className} {...props}>
