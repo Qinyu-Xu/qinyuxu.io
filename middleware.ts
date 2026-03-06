@@ -4,39 +4,21 @@ export function middleware(request: NextRequest) {
   const country = (request as any).geo?.country;
   const hostname = request.headers.get('host') ?? '';
   const hostnameWithoutPort = hostname.split(':')[0];
-  const pathname = request.nextUrl.pathname;
-  const isAlreadyRewritten = request.headers.get('x-rewritten') === 'true';
+  const isMe = hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me';
 
-  if (isAlreadyRewritten) {
-    return NextResponse.next();
-  }
-
-  if (country === 'CN' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
+  if (isMe && country === 'CN') {
     return new NextResponse('404', { status: 404 });
   }
 
-  if (pathname === '/robots.txt' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
+  if (isMe && request.nextUrl.pathname === '/robots.txt') {
     return new NextResponse('User-agent: *\nDisallow: /', {
       headers: { 'Content-Type': 'text/plain' },
     });
   }
 
-  console.log('host header:', hostname);
-  console.log('hostname:', hostnameWithoutPort);
-  console.log('pathname:', pathname);
-
-  if (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me') {
-    const url = request.nextUrl.clone();
-    url.pathname = '/me';
-    const response = NextResponse.rewrite(url);
-    response.headers.set('x-domain', 'me');
-    response.headers.set('x-rewritten', 'true');
-    return response;
-  }
-
   if (
     (hostnameWithoutPort === 'qinyuxu.io' || hostnameWithoutPort === 'www.qinyuxu.io') &&
-    pathname === '/me'
+    request.nextUrl.pathname === '/me'
   ) {
     return NextResponse.redirect('https://qinyuxu.me', 302);
   }
