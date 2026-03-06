@@ -1,8 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
+  const country = (request as any).geo?.country;
   const hostname = request.headers.get('host') ?? '';
   const hostnameWithoutPort = hostname.split(':')[0];
+
+  if (country === 'CN' && (hostnameWithoutPort === 'qinyuxu.me' || hostnameWithoutPort === 'www.qinyuxu.me')) {
+    return new NextResponse('404', { status: 404 });
+  }
 
   console.log('host header:', hostname);
   console.log('hostname:', hostnameWithoutPort);
