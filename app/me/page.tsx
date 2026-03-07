@@ -44,9 +44,10 @@ export default function Me() {
       <h2 className={h2}>Now</h2>
       <ul className="text-gray-800 dark:text-zinc-300 list-disc pl-5 space-y-1">
         <li className="pl-1">figuring out small talk in English after yet another day of not knowing my research direction</li>
-        <li className="pl-1">wondering why the entire world decided to do MLSys at the same time</li><li className="pl-1">listening to Aperture on repeat</li>
+        <li className="pl-1">wondering why the entire world decided to do MLSys at the same time</li>
+        <li className="pl-1">listening to Aperture on repeat</li>
         <li className="pl-1">bouldering from scratch (currently: v1)</li>
-        <li className="pl-1">trying to make latte and matcha art (currently: milk foam)</li>
+        <li className="pl-1">trying to make latte and matcha art (currently: milk foam, but better than <a href="https://akutagawa1998.github.io/people/" className="underline">this guy</a>)</li>
         <li className="pl-1">learning to run faster with people who are already fast</li>
         <li className="pl-1">can't figure out how to afford Roosevelt Island Racquet Club</li>
         <li className="pl-1">weekly pilgrimage to Flushing for <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>螺蛳粉</span> and <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>鸭血粉丝</span></li>
