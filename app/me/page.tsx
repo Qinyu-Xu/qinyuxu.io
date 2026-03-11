@@ -49,8 +49,9 @@ export default function Me() {
         <li className="pl-1">trying to make <ImageHover src="/latte.jpeg" alt="latte art">latte</ImageHover> and <ImageHover src="/matcha.jpeg" alt="matcha art">matcha</ImageHover> art, better than <a href="https://akutagawa1998.github.io/people/" className="underline">this guy</a></li>
         <li className="pl-1">learning to run faster with people who are already fast</li>
         <li className="pl-1">can't figure out how to afford Roosevelt Island Racquet Club</li>
-        <li className="pl-1">weekly pilgrimage to Flushing for <ImageHover src="/luosifen.jpeg" alt="螺蛳粉"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>螺蛳粉</span></ImageHover> and <ImageHover src="/yaxuefensi.jpeg" alt="鸭血粉丝"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>鸭血粉丝</span></ImageHover>(Unfortunately I don't have enough time to do so now.)</li>
+        <li className="pl-1">weekly pilgrimage to Flushing for <ImageHover src="/luosifen.jpeg" alt="螺蛳粉"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>螺蛳粉</span></ImageHover> and <ImageHover src="/yaxuefensi.jpeg" alt="鸭血粉丝"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>鸭血粉丝</span></ImageHover>(unfortunately I don't have enough time to do so now.)</li>
         <li className="pl-1"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>写这个网站真是太好玩儿了</span></li>
+        <li className="pl-1">obsessed with the 8th Ave express structure under Central Park, want to build a max flow simulator for mta, unfortunately I don't have time either</li>
       </ul>
       <br />
       This website strictly follows the rules of software engineering. If you don't believe me, go check my commit messages. <br />
