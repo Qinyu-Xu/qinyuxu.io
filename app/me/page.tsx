@@ -31,13 +31,13 @@ export default function Me() {
 
       <h2 className={h2}>About</h2>
       <p className={p}>
-        PhD student by day. Boring by self-assessment. Interesting by accident. People say I'm innocent — they're probably right. If you're a cute and interesting guy — or happen to know one you'd recommend — say hi on <a href="https://www.instagram.com/qinyu_xu/" target="_blank" rel="noopener noreferrer" className="underline">Instagram</a>. I also think about <a href="https://qinyuxu.io" className="underline">serious things</a>.
+        PhD student by day. <s>Boring by self-assessment</s> (someone disagrees). Interesting by accident. People say I'm innocent — they're probably right. If you're a cute and interesting guy — or happen to know one you'd recommend — say hi on <a href="https://www.instagram.com/qinyu_xu/" target="_blank" rel="noopener noreferrer" className="underline">Instagram</a>. I also think about <a href="https://qinyuxu.io" className="underline">serious things</a>.
       </p>
 
       <h2 className={h2}>Life</h2>
       <p className={p}>Grew up in a <a href="https://maps.app.goo.gl/WSQr3WpBkuDXV6Pp6" target="_blank" rel="noopener noreferrer" className="underline">small town near Shanghai</a>. Native speaker of <a href="https://en.wikipedia.org/wiki/Lower_Yangtze_Mandarin" target="_blank" rel="noopener noreferrer" className="underline"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>苏北</span>nese</a>, which you've never heard of. Moved to New York in 2025 for grad school, which means I traded one kind of not-knowing-what-I'm-doing for another, but in English this time. </p>
       <p className={p + ' mt-3'}>Also recently started learning how to be gay, which is its own kind of grad school.</p>
-      <p className={p + ' mt-3'}>Most of my life happens at <ImageHover src="/desk.jpeg" alt="my desk">a desk on the 4th floor of 60 5th Ave</ImageHover>. The rest happens on any random corners around the city.</p>
+      <p className={p + ' mt-3'}>Most of my life happens at <ImageHover src="/desk.jpeg" alt="my desk">a desk on 60 5th Ave</ImageHover>. The rest happens on any random corners around the city.</p>
       <p className={p + ' mt-3'}>I'm still figuring out most things.</p>
 
       <h2 className={h2}>Now</h2>
