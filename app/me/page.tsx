@@ -1,11 +1,17 @@
 import type { Metadata } from 'next';
-import { Ma_Shan_Zheng } from 'next/font/google';
+import { Ma_Shan_Zheng, Zen_Kaku_Gothic_New } from 'next/font/google';
 import { PageHeader } from '@/components/page-header';
 import { h2, p } from '@/lib/styles';
 import { ImageHover } from '@/components/image-hover';
 
 const maShanZheng = Ma_Shan_Zheng({
   weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const zenKaku = Zen_Kaku_Gothic_New({
+  weight: '500',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -42,15 +48,15 @@ export default function Me() {
 
       <h2 className={h2}>Now</h2>
       <ul className="text-gray-800 dark:text-zinc-300 list-disc pl-5 space-y-1">
-        <li className="pl-1">obsessed with city pop and desperately want to be <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>シブヤ系</span></li>
+        <li className="pl-1">obsessed with <a href='https://open.spotify.com/track/17TSNiT7OZ5BbaCXnHXe5E?si=406b76704dc346a2' target="_blank" rel="noopener noreferrer" className="underline">city pop</a> and desperately want to be <span className={zenKaku.className} style={{fontSize: '0.85em'}}>シブヤ系</span></li>
         <li className="pl-1">wondering why the entire world decided to do MLSys at the same time</li>
-        <li className="pl-1">rotating Harry Styles's new album — <a href="https://www.youtube.com/watch?v=g0O9q3ycL7U" target="_blank" rel="noopener noreferrer" className="underline">Season 2 Weight Loss</a> especially</li>
-        <li className="pl-1">bouldering from scratch (currently: v1)</li>
+        <li className="pl-1">rotating Harry Styles's new album — <a href="https://open.spotify.com/track/028i7HBfp8uE5epmx5ieMA?si=b1c79262c7c446ba" target="_blank" rel="noopener noreferrer" className="underline">Pop</a> especially</li>
+        <li className="pl-1">bouldering from scratch (<s>currently: v1</s> good news, now v2)</li>
         <li className="pl-1">trying to make <ImageHover src="/latte.jpeg" alt="latte art">latte</ImageHover> and <ImageHover src="/matcha.jpeg" alt="matcha art">matcha</ImageHover> art, better than <a href="https://akutagawa1998.github.io/people/" className="underline">this guy</a></li>
         <li className="pl-1">learning to run faster with people who are already fast</li>
         <li className="pl-1">can't figure out how to afford Roosevelt Island Racquet Club</li>
-        <li className="pl-1">weekly pilgrimage to Flushing for <ImageHover src="/luosifen.jpeg" alt="螺蛳粉"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>螺蛳粉</span></ImageHover> and <ImageHover src="/yaxuefensi.jpeg" alt="鸭血粉丝"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>鸭血粉丝</span></ImageHover>(unfortunately I don't have enough time to do so now)</li>
-        <li className="pl-1">obsessed with the 8th Ave express structure under Central Park, want to build a max flow simulator for mta, unfortunately I don't have time either</li>
+        <li className="pl-1">weekly pilgrimage to Flushing for <ImageHover src="/luosifen.jpeg" alt="螺蛳粉"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>螺蛳粉</span></ImageHover> and <ImageHover src="/yaxuefensi.jpeg" alt="鸭血粉丝"><span className={maShanZheng.className} style={{fontSize: '0.9em'}}>鸭血粉丝</span></ImageHover></li>
+        <li className="pl-1">obsessed with the 8th Ave express structure under Central Park, want to build a max flow simulator for mta</li>
       </ul>
       <br />
       This website strictly follows the rules of software engineering. If you don't believe me, go check my commit messages. <br />
