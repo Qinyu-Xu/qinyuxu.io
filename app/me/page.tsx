@@ -37,6 +37,9 @@ export default function Me() {
 
       <h2 className={h2}>About</h2>
       <p className={p}>
+        My name is <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>徐秦宇</span> (xú qín yǔ) — <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>徐</span> from my dad, <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>秦</span> from my mom, and <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>宇</span> because it rained the day I was born (<span className={maShanZheng.className} style={{fontSize: '0.9em'}}>雨</span> → <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>宇</span>). I don't have an English name and I'm not planning on getting one. A simple version for English speakers is roughly chin-you. As for the last name — don't even try (it's roughly like "shoe," but I think that analogy is so weird that I'd rather you just not attempt it). You'll survive.
+      </p>
+      <p className={p + ' mt-3'}>
         PhD student by day. <s>Boring by self-assessment</s> (someone disagrees). Interesting by accident. People say I'm innocent — they're probably right. If you're a cute and interesting guy — or happen to know one you'd recommend — say hi on <a href="https://www.instagram.com/qinyu_xu/" target="_blank" rel="noopener noreferrer" className="underline">Instagram</a>. I also think about <a href="https://qinyuxu.io" className="underline">serious things</a>.
       </p>
 
@@ -51,7 +54,7 @@ export default function Me() {
         <li className="pl-1">obsessed with <a href='https://open.spotify.com/track/17TSNiT7OZ5BbaCXnHXe5E?si=406b76704dc346a2' target="_blank" rel="noopener noreferrer" className="underline">city pop</a> and desperately want to be <span className={zenKaku.className} style={{fontSize: '0.85em'}}>シブヤ系</span>, secretly want to be a <span className={zenKaku.className} style={{fontSize: '0.85em'}}>JR運転士</span></li>
         <li className="pl-1">wondering why the entire world decided to do MLSys at the same time</li>
         <li className="pl-1">rotating Harry Styles's new album — <a href="https://open.spotify.com/track/028i7HBfp8uE5epmx5ieMA?si=b1c79262c7c446ba" target="_blank" rel="noopener noreferrer" className="underline">Pop</a> especially</li>
-        <li className="pl-1">bouldering from scratch (<s>currently: v1</s> good news, now v2)</li>
+        <li className="pl-1">bouldering from scratch (<s>currently: v1</s> [3/15]good news, now v2)</li>
         <li className="pl-1">trying to make <ImageHover src="/latte.jpeg" alt="latte art">latte</ImageHover> and <ImageHover src="/matcha.jpeg" alt="matcha art">matcha</ImageHover> art, better than <a href="https://akutagawa1998.github.io/people/" className="underline">this guy</a></li>
         <li className="pl-1">learning to run faster with people who are already fast</li>
         <li className="pl-1">can't figure out how to afford Roosevelt Island Racquet Club</li>
