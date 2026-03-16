@@ -42,7 +42,7 @@ export default function Me() {
 
       <h2 className={h2}>Now</h2>
       <ul className="text-gray-800 dark:text-zinc-300 list-disc pl-5 space-y-1">
-        <li className="pl-1">figuring out how to make friends outside of school as an adult for the first time</li>
+        <li className="pl-1">obsessed with city pop and desperately want to be <span className={maShanZheng.className} style={{fontSize: '0.9em'}}>シブヤ系</span></li>
         <li className="pl-1">wondering why the entire world decided to do MLSys at the same time</li>
         <li className="pl-1">rotating Harry Styles's new album — <a href="https://www.youtube.com/watch?v=g0O9q3ycL7U" target="_blank" rel="noopener noreferrer" className="underline">Season 2 Weight Loss</a> especially</li>
         <li className="pl-1">bouldering from scratch (currently: v1)</li>
