@@ -52,7 +52,6 @@ export default function Me() {
       <h2 className={h2}>Now</h2>
       <ul className="text-gray-800 dark:text-zinc-300 list-disc pl-5 space-y-1">
         <li className="pl-1">obsessed with <a href='https://open.spotify.com/track/17TSNiT7OZ5BbaCXnHXe5E?si=406b76704dc346a2' target="_blank" rel="noopener noreferrer" className="underline">city pop</a> and desperately want to be <span className={zenKaku.className} style={{fontSize: '0.85em'}}>シブヤ系</span>, secretly want to be a <span className={zenKaku.className} style={{fontSize: '0.85em'}}>JR運転士</span></li>
-        <li className="pl-1">wondering why the entire world decided to do MLSys at the same time</li>
         <li className="pl-1">rotating Harry Styles's new album — <a href="https://open.spotify.com/track/028i7HBfp8uE5epmx5ieMA?si=b1c79262c7c446ba" target="_blank" rel="noopener noreferrer" className="underline">Pop</a> especially</li>
         <li className="pl-1">bouldering from scratch (<s>currently: v1</s> [3/15]good news, now v2)</li>
         <li className="pl-1">trying to make <ImageHover src="/latte.jpeg" alt="latte art">latte</ImageHover> and <ImageHover src="/matcha.jpeg" alt="matcha art">matcha</ImageHover> art, better than <a href="https://akutagawa1998.github.io/people/" className="underline">this guy</a></li>
