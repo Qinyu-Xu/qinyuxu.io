@@ -19,7 +19,7 @@ export default function Page() {
       <h2 className={h2}>About</h2>
       <p className={p}>
         I am a Ph.D. student at the Courant Institute of Mathematical Sciences, New York University, advised by <a href="https://cs.nyu.edu/~apanda/" target="_blank" rel="noopener noreferrer" className="underline">Aurojit Panda</a>. My research focuses on systems for machine learning, with an emphasis on efficient LLM inference and serving.{' '}
-        <span style={{ opacity: 0.05 }}>I also think about <a href="https://qinyuxu.me" className="underline">other things</a>.</span>
+        {/* <span style={{ opacity: 0.05 }}>I also think about <a href="https://qinyuxu.me" className="underline">other things</a>.</span> */}
       </p>
 
       <h2 className={h2}>Research Interests</h2>
